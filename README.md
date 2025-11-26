@@ -1,59 +1,59 @@
-TepsitMediaPlayer
+🎧 TepsitMediaPlayer
 
-TepsitMediaPlayer è un’applicazione multimediale sviluppata in Python utilizzando PyQt6, progettata per offrire una gestione semplice ed efficace di contenuti audio e video.
-L’interfaccia grafica è moderna, ordinata e progettata per facilitare l’uso quotidiano.
-
-⸻
-
-Funzionalità e Implementazione (con righe di codice)
-	•	Riproduzione audio e video separata
-Ogni tipo di file ha un player dedicato:
-	•	Audio: self.audio_player (riga ~72) + self.audio_audio_output (riga ~73)
-	•	Video: self.video_player (riga ~63) + self.video_audio_output (riga ~64) + self.video_widget (riga ~65)
-	•	Supporto ai formati comuni
-Video: MP4, AVI, MKV, MOV
-Audio: MP3, WAV, OGG
-Implementato nelle funzioni load_video_files (~riga 187) e load_audio_files (~riga 271) tramite QFileDialog e filtri.
-	•	Controlli completi (Play, Pausa, Stop, Avanti, Indietro, Volume, Posizione)
-Funzioni:
-	•	play_pause_video (~riga 202)
-	•	stop_video (~riga 209)
-	•	prev_video (~riga 215)
-	•	next_video (~riga 221)
-	•	play_pause_audio (~riga 291)
-	•	stop_audio (~riga 298)
-	•	prev_audio (~riga 304)
-	•	next_audio (~riga 310)
-Slider sincronizzati con segnali positionChanged e durationChanged:
-	•	Video: position_changed_video (~riga 227), duration_changed_video (~riga 231), set_position_video (~riga 235)
-	•	Audio: position_changed_audio (~riga 316), duration_changed_audio (~riga 320), set_position_audio (~riga 324)
-	•	Playlist audio e video
-Liste gestite con QListWidget:
-	•	Video: self.video_list (~riga 85), gestione doppio clic: video_item_double_clicked (~riga 241)
-	•	Audio: self.audio_list (~riga 108), gestione doppio clic: audio_item_double_clicked (~riga 330)
-	•	Salvataggio automatico dei file
-Copia dei file in audio_files/ e video_files/ realizzata tramite shutil.copy dentro:
-	•	load_video_files (~riga 187)
-	•	load_audio_files (~riga 271)
-	•	Aggiornamento interfaccia durante la riproduzione
-	•	Aggiornamento label: self.label_video (~riga 69) e self.label_audio (~riga 77)
-	•	Slider di avanzamento sincronizzati con i segnali dei media player come sopra.
-	•	Interfaccia con colori neutri e leggibili
-Implementata tramite self.setStyleSheet (~riga 21), definendo colori di sfondo, pulsanti, slider e testi.
+TepsitMediaPlayer è un’applicazione multimediale sviluppata in Python con PyQt6, progettata per offrire una gestione semplice ed efficace di contenuti audio e video.
+L’interfaccia grafica è moderna, ordinata e studiata per facilitare l’uso quotidiano.
 
 ⸻
 
-Obiettivo del Progetto
+✨ Funzionalità principali
+	•	🎬 Riproduzione video tramite QMediaPlayer e QVideoWidget
+	•	🎵 Riproduzione audio tramite QMediaPlayer + QAudioOutput
+	•	📂 Playlist separate per audio e video con navigazione avanti/indietro
+	•	💾 Salvataggio automatico dei file nelle cartelle dedicate:
+	•	audio_files/
+	•	video_files/
+	•	🎛 Controlli multimediali completi: Play, Pausa, Stop, Avanti, Indietro
+	•	🎚 Slider per avanzamento e regolazione volume, aggiornati in tempo reale
+	•	🖥️ Interfaccia chiara e leggibile, colori neutri
+	•	🧩 Gestione dei file tramite doppio clic e aggiornamento delle label con il nome del file
 
-BrightMediaPlayer nasce per fornire un player semplice, leggero e immediato, che consenta di:
+⸻
+
+🛠 Implementazione delle funzionalità
+
+Funzionalità	Funzione / Classe	Riga di riferimento
+Riproduzione audio	self.audio_player, self.audio_audio_output	72-73
+Riproduzione video	self.video_player, self.video_audio_output, self.video_widget	63-65
+Caricamento video	load_video_files()	187
+Caricamento audio	load_audio_files()	271
+Play/Pausa video	play_pause_video()	202
+Stop video	stop_video()	209
+Precedente/Successivo video	prev_video(), next_video()	215, 221
+Play/Pausa audio	play_pause_audio()	291
+Stop audio	stop_audio()	298
+Precedente/Successivo audio	prev_audio(), next_audio()	304, 310
+Slider posizione video	position_changed_video(), duration_changed_video(), set_position_video()	227, 231, 235
+Slider posizione audio	position_changed_audio(), duration_changed_audio(), set_position_audio()	316, 320, 324
+Playlist video	self.video_list, video_item_double_clicked()	85, 241
+Playlist audio	self.audio_list, audio_item_double_clicked()	108, 330
+Salvataggio file	shutil.copy() all’interno di load_video/audio_files	187, 271
+Aggiornamento label e slider	Label: self.label_video, self.label_audio	69, 77
+Interfaccia grafica	self.setStyleSheet()	21
+
+
+⸻
+
+🎯 Obiettivo del progetto
+
+BrightMediaPlayer nasce per fornire un player leggero, semplice e immediato, che permetta di:
 	•	Ascoltare musica
 	•	Guardare video
 	•	Organizzare automaticamente i file multimediali
-	•	Usare un’interfaccia moderna e pulita, facilmente ampliabile.
+	•	Usare un’interfaccia moderna e pulita, facilmente ampliabile
 
 ⸻
 
-Tecnologia Utilizzata
+⚙️ Tecnologia utilizzata
 	•	Python 3.10+
 	•	PyQt6 (QtWidgets, QtMultimedia, QtGui)
 	•	Gestione file: os, shutil, QFileDialog
@@ -62,7 +62,7 @@ Tecnologia Utilizzata
 
 ⸻
 
-Licenza
+📄 Licenza
 
 Progetto libero e modificabile.
 L’utente può adattarlo, ampliarlo o integrarlo in altri sistemi.
