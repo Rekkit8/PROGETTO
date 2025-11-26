@@ -21,24 +21,25 @@ L’interfaccia grafica è moderna, ordinata e studiata per facilitare l’uso q
 
 🛠 Implementazione delle funzionalità
 
-Funzionalità	Funzione / Classe	Riga di riferimento
-Riproduzione audio	self.audio_player, self.audio_audio_output	72-73
-Riproduzione video	self.video_player, self.video_audio_output, self.video_widget	63-65
-Caricamento video	load_video_files()	187
-Caricamento audio	load_audio_files()	271
-Play/Pausa video	play_pause_video()	202
-Stop video	stop_video()	209
-Precedente/Successivo video	prev_video(), next_video()	215, 221
-Play/Pausa audio	play_pause_audio()	291
-Stop audio	stop_audio()	298
-Precedente/Successivo audio	prev_audio(), next_audio()	304, 310
-Slider posizione video	position_changed_video(), duration_changed_video(), set_position_video()	227, 231, 235
-Slider posizione audio	position_changed_audio(), duration_changed_audio(), set_position_audio()	316, 320, 324
-Playlist video	self.video_list, video_item_double_clicked()	85, 241
-Playlist audio	self.audio_list, audio_item_double_clicked()	108, 330
-Salvataggio file	shutil.copy() all’interno di load_video/audio_files	187, 271
-Aggiornamento label e slider	Label: self.label_video, self.label_audio	69, 77
-Interfaccia grafica	self.setStyleSheet()	21
+| Funzionalità                | Funzione / Classe                                     | Riga di riferimento |
+|-----------------------------|------------------------------------------------------|------------------|
+| Riproduzione audio           | `self.audio_player`, `self.audio_audio_output`       | 72-73            |
+| Riproduzione video           | `self.video_player`, `self.video_audio_output`, `self.video_widget` | 63-65            |
+| Caricamento video            | `load_video_files()`                                 | 187              |
+| Caricamento audio            | `load_audio_files()`                                 | 271              |
+| Play/Pausa video             | `play_pause_video()`                                 | 202              |
+| Stop video                   | `stop_video()`                                       | 209              |
+| Precedente/Successivo video  | `prev_video()`, `next_video()`                       | 215, 221         |
+| Play/Pausa audio             | `play_pause_audio()`                                 | 291              |
+| Stop audio                   | `stop_audio()`                                       | 298              |
+| Precedente/Successivo audio  | `prev_audio()`, `next_audio()`                       | 304, 310         |
+| Slider posizione video       | `position_changed_video()`, `duration_changed_video()`, `set_position_video()` | 227, 231, 235 |
+| Slider posizione audio       | `position_changed_audio()`, `duration_changed_audio()`, `set_position_audio()` | 316, 320, 324 |
+| Playlist video               | `self.video_list`, `video_item_double_clicked()`     | 85, 241          |
+| Playlist audio               | `self.audio_list`, `audio_item_double_clicked()`     | 108, 330         |
+| Salvataggio file             | `shutil.copy()` all’interno di `load_video_files()` e `load_audio_files()` | 187, 271 |
+| Aggiornamento label e slider | Label: `self.label_video`, `self.label_audio`       | 69, 77           |
+| Interfaccia grafica          | `self.setStyleSheet()`                               | 21               |
 
 
 ⸻
